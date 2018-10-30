@@ -1,1 +1,2 @@
-# curso_datacube_code
+# Codigo del Curso Cubo de datos
+# Codigo por PhD. Jacopo Fritz 
