@@ -18,7 +18,7 @@ kk = 2.*np.pi/(360.*3600.)					# one arcsec in rad units
 fw2sig = 1./(2.*np.sqrt(2.*np.log(2.)))
 # pacs @ 70
 if wimg == 1:
-	img = 'M51_pacs70.fits'
+	img = 'data-hershel/m51_pacs_70.fits'
 	outfile = 'M51_pacs70_convolved.fits'
 	wind = 0
 	print ''
@@ -26,15 +26,15 @@ if wimg == 1:
 	print ''
 # pacs @ 160
 if wimg == 2:
-	img = 'M51_pacs160.fits'
+	img = 'data-hershel/m51_pacs_160.fits'
 	outfile = 'M51_pacs160_convolved.fits'
-	wind = 0
+	wind = 1
 	print ''
 	print 'Processing pacs data at 160 microns'
 	print ''
 # spire @ 250
 if wimg == 3:
-	img = 'M51_spire250.fits'
+	img = 'data-hershel/m51_spi_250.fits'
 	outfile = 'M51_spire250_convolved.fits'
 	wind = 2
 	print ''
@@ -42,14 +42,14 @@ if wimg == 3:
 	print ''
 # spire @ 350
 if wimg == 4:
-	img = 'M51_spire350.fits'
+	img = 'data-hershel/m51_spi_350.fits'
 	outfile = 'M51_spire350_convolved.fits'
 	wind = 3
 	print ''
 	print 'Processing spire data at 350 microns'
 	print ''
 # read only the header of spire @ 500 to be used as WCS reference
-img500 = 'M51_spire500.fits'
+img500 = 'data-hershel/m51_spi_500.fits'
 hdulist500 = fits.open(img500)
 header500 = hdulist500[1].header
 pixsz500 = np.abs(header500["CDELT1"])*3600.
